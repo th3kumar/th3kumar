@@ -39,9 +39,7 @@ I'm Mantu Kumar, a passionate Android developer from India. Welcome to my GitHub
   <a href="https://developer.android.com" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="Android" width="40" height="40" style="vertical-align:top; margin:4px"/>
   </a>
-  <a href="
-
-https://www.cprogramming.com/" target="_blank" rel="noreferrer">
+  <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" width="40" height="40" style="vertical-align:top; margin:4px"/>
   </a>
   <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer">
