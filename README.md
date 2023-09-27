@@ -59,17 +59,13 @@ I'm Mantu Kumar, a passionate Android developer from India. Welcome to my GitHub
   </a>
 </p>
 
-## Support:
 
-If you find my work helpful or interesting, you can buy me a coffee to show your support.
 
-[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/mantukumar)
+  ### GitHub Stats
+<img width="400" src="https://github-readme-stats.vercel.app/api?username=th3kumar&count_private=true&show_icons=true&theme=tokyonight&hide_border=true" />
+<img width="830" src="https://github-readme-activity-graph.vercel.app/graph?username=th3kumar&theme=tokyo-night&area=true&hide_border=true" /><br/>
 
-## GitHub Stats:
-
-<p align="center">
-  
-  <img align="left" width="430" height="190" src="https://github-readme-stats.vercel.app/api?username=th3kumar&show_icons=true&hide_border=false&line_height=20&title_color=336791&icon_color=1b93c9&show_owner=true"/>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=th3kumar&layout=donut-vertical&theme=tokyonight&hide_border=true&count_private=true)](https://github.com/anuraghazra/github-readme-stats)
  
 </p>
 
@@ -85,6 +81,11 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+
+## GitHub Trophies
+
+![trophies](https://github-profile-trophy.vercel.app/?username=TomVer99&theme=tokyonight&no-frame=true&column=8)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=th3kumar&label=Profile%20Views&color=12&pretty=false)](https://visitcount.itsvg.in)
