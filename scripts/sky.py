@@ -74,22 +74,28 @@ def text_w(s, size):
 
 def last_shipped(now):
     """'Last shipped · <commit subject> · 3 days ago', or None if it can't be read."""
-    req = urllib.request.Request(f"https://api.github.com/repos/{SHIP_REPO}/commits?per_page=1",
+    req = urllib.request.Request(f"https://api.github.com/repos/{SHIP_REPO}/commits?per_page=20",
                                  headers={"Accept": "application/vnd.github+json", "User-Agent": "th3kumar-sky"})
     tok = os.environ.get("GITHUB_TOKEN")
     if tok:
         req.add_header("Authorization", f"Bearer {tok}")
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
-            c = json.load(r)[0]["commit"]
+            commits = json.load(r)
     except Exception as e:  # network, rate limit, empty repo
         print("last_shipped: skipped:", e, file=sys.stderr)
         return None
-    subject = c["message"].splitlines()[0].strip()
-    subject = re.sub(r"^\w+(\([^)]*\))?!?:\s*", "", subject)        # drop "feat(x):" style prefixes
-    subject = re.sub(r"\s*\(#\d+\)$", "", subject)                   # drop "(#12)"
-    if not subject or subject.lower().startswith(("merge ", "wip", "update readme")):
-        subject = "a new update"
+    c, subject = None, ""
+    for item in commits:  # newest first; skip merges and housekeeping
+        subj = item["commit"]["message"].splitlines()[0].strip()
+        subj = re.sub(r"^\w+(\([^)]*\))?!?:\s*", "", subj)          # drop "feat(x):" style prefixes
+        subj = re.sub(r"\s*\(#\d+\)$", "", subj)                     # drop "(#12)"
+        if len(item.get("parents", [])) > 1 or not subj or subj.lower().startswith(("merge", "wip", "update readme", "bump")):
+            continue
+        c, subject = item["commit"], subj
+        break
+    if c is None:
+        return None
     subject = subject[0].lower() + subject[1:] if subject[:2] != subject[:2].upper() else subject
     if len(subject) > 34:
         subject = subject[:33].rstrip() + "…"
