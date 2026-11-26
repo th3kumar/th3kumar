@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" fill="none" role="img">
+<style>
+  .t{font-family:-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Inter, Roboto, 'Helvetica Neue', Arial, sans-serif;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  @keyframes breathe{0%,100%{opacity:.35}50%{opacity:1}}
+  @media (prefers-reduced-motion: reduce){*{animation:none!important}}
+
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-600px)}}
+  .w1{animation:slide 40s linear infinite}
+  .w2{animation:slide 56s linear infinite}
+</style>
+
+<defs>
+  <linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#0d1117" stop-opacity="1"/><stop offset=".18" stop-color="#0d1117" stop-opacity="0"/><stop offset=".82" stop-color="#0d1117" stop-opacity="0"/><stop offset="1" stop-color="#0d1117" stop-opacity="1"/></linearGradient>
+</defs>
+<g class="w1"><path d="M0 46 Q150 36 300 46 Q450 56 600 46 Q750 36 900 46 Q1050 56 1200 46 Q1350 36 1500 46 Q1650 56 1800 46" stroke="#8fb8a6" stroke-opacity=".55" stroke-width="1.5"/></g>
+<g class="w2"><path d="M0 54 Q150 40 300 54 Q450 68 600 54 Q750 40 900 54 Q1050 68 1200 54 Q1350 40 1500 54 Q1650 68 1800 54" stroke="#a7a3e0" stroke-opacity=".4" stroke-width="1.5"/></g>
+<rect width="1200" height="80" fill="url(#fade)"/>
+<text class="t" x="600.0" y="108" font-size="14" text-anchor="middle" letter-spacing=".4" fill="#5c6573">Thanks for stopping by. Take a slow breath before the next tab.</text>
+
+</svg>
